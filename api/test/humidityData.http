@@ -1,0 +1,35 @@
+### GET ALL HUMIDITY DATA
+GET http://localhost:3000/api/v1/humidityData/ HTTP/1.1
+
+### GET HUMIDITY DATA BY ID
+GET http://localhost:3000/api/v1/humidityData/6908f1e5c79ea5741a2916e8 HTTP/1.1
+
+### POST NEW HUMIDITY DATA
+POST http://localhost:3000/api/v1/humidityData/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "airHumidity": 63.4,
+    "DewPoint": 12.8,
+    "sondaName": "pandora003@barcelona.aemet.es",
+    "dateMedition": "2025-11-03",
+    "hourMedition": "10:47:00"
+}
+
+
+
+### PUT HUMIDITY DATA BY ID    
+PUT http://localhost:3000/api/v1/humidityData/6908f1e5c79ea5741a2916e8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "airHumidity": 63.4,
+    "DewPoint": 13.8,
+    "sondaName": "pandora007@barcelona.aemet.es",
+    "dateMedition": "2025-11-03",
+    "hourMedition": "10:47:00"
+}
+
+
+### DELETE HUMIDITY DATA BY ID
+DELETE http://localhost:3000/api/v1/humidityData/6908f1e5c79ea5741a2916e8 HTTP/1.1

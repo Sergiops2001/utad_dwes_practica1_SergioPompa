@@ -1,0 +1,43 @@
+### GET ALL AIR QUALITY
+GET http://localhost:3000/api/v1/airQuality/ HTTP/1.1
+
+### GET AIR QUALITY BY ID
+GET http://localhost:3000/api/v1/airQuality/6908f0d4c79ea5741a2916db HTTP/1.1
+
+### POST NEW AIR QUALITY
+POST http://localhost:3000/api/v1/airQuality/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "airQualityIndex": 42,
+    "ozoneAmount": 92,                 
+    "numberSmallParticles": 18,       
+    "numberLargeParticles": 6,        
+    "amountNitrogenDioxide": 32.4,    
+    "amountCarbonMonoxide": 0.7,      
+    "amountSulfurDioxide": 4.5,       
+    "sondaName": "brewer150@izana.aemet.es",
+    "dateMedition": "2025-11-03",
+    "hourMedition": "19:11:00"
+}
+
+
+### PUT AIR QUALITY BY ID    
+PUT http://localhost:3000/api/v1/airQuality/6908f0d4c79ea5741a2916db HTTP/1.1
+Content-Type: application/json
+
+{
+    "airQualityIndex": 44,
+    "ozoneAmount": 89,                 
+    "numberSmallParticles": 27,       
+    "numberLargeParticles": 6,        
+    "amountNitrogenDioxide": 37.4,    
+    "amountCarbonMonoxide": 1.2,      
+    "amountSulfurDioxide": 4.5,       
+    "sondaName": "brewer150@izana.aemet.es",
+    "dateMedition": "2025-11-03",
+    "hourMedition": "19:11:00"
+}
+
+### DELETE AIR QUALITY BY ID
+DELETE http://localhost:3000/api/v1/airQuality/6908f0d4c79ea5741a2916db HTTP/1.1
