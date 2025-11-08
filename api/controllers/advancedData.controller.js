@@ -32,7 +32,7 @@ const createAdvancedData = async (req, res) => {
 
 const updateAdvancedData = async (req, res) => {
     try {
-        const data = await advancedDataModel.findByIdAndUpdate(req.params.id, req.body);
+        const data = await advancedDataModel.findByIdAndUpdate(req.params.id, req.body,{ new: true });
         res.send({ error: false, data });
     } catch (err) {
         console.log(`[advancedDataController | update] ERROR: ${err}`);

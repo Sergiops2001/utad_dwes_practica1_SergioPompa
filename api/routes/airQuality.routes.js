@@ -1,7 +1,7 @@
 /*
-    Título: User Route
+    Título: airQuality Route
     Nombre: Sergio Pompa
-    Descripción: Declaración de las rutas de usuario
+    Descripción: Declaración de las rutas de airQuality
 */
 
 /* Importado de Bibliotecas */

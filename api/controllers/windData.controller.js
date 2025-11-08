@@ -32,7 +32,7 @@ const createWind = async (req, res) => {
 
 const updateWind = async (req, res) => {
     try {
-        const data = await windModel.findByIdAndUpdate(req.params.id, req.body);
+        const data = await windModel.findByIdAndUpdate(req.params.id, req.body,{ new: true });
         res.send({ error: false, data });
     } catch (err) {
         console.log(`[windDataController | update] ERROR: ${err}`);

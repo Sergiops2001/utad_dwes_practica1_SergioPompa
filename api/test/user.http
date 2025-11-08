@@ -2,31 +2,31 @@
 GET http://localhost:3000/api/v1/user/ HTTP/1.1
 
 ### GET USER BY ID
-GET http://localhost:3000/api/v1/user/6903b09b4f0cd9a7a546c2ad HTTP/1.1
+GET http://localhost:3000/api/v1/user/690f716299b398bdacfb3c7a HTTP/1.1
 
 ### POST NEW USER 
 POST http://localhost:3000/api/v1/user/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "Sergio",
-    "fullName": "segio perez",
+    "username": "Juan",
+    "fullName": "juan perez",
     "description": "Usuario de prueba",
-    "email": "sergioperez@gmail.com",
+    "email": "juanperez@gmail.com",
     "password": "1234"
 }
 
 ### PUT USER BY ID
-PUT http://localhost:3000/api/v1/user/6903b4074f71890df691a6df HTTP/1.1
+PUT http://localhost:3000/api/v1/user/690f716299b398bdacfb3c7a HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "Alberto",
-    "fullName": "Alberto perez",
+    "username": "Juanito",
+    "fullName": "Juanito perez",
     "description": "Usuario de prueba",
-    "email": "sergioperez@gmail.com",
+    "email": "Juanitoperez@gmail.com",
     "password": "1234"
 }
 
 ### DELETE USER BY ID
-DELETE http://localhost:3000/api/v1/user/6903b09b4f0cd9a7a546c2ad HTTP/1.1
+DELETE http://localhost:3000/api/v1/user/690f716299b398bdacfb3c7a HTTP/1.1

@@ -1,7 +1,7 @@
 /*
-    Título: User Route
+    Título: windData Route
     Nombre: Sergio Pompa
-    Descripción: Declaración de las rutas de usuario
+    Descripción: Declaración de las rutas de windData
 */
 
 /* Importado de Bibliotecas */

@@ -32,7 +32,7 @@ const createPrecipitation = async (req, res) => {
 
 const updatePrecipitation = async (req, res) => {
     try {
-        const data = await precipitationModel.findByIdAndUpdate(req.params.id, req.body);
+        const data = await precipitationModel.findByIdAndUpdate(req.params.id, req.body,{ new: true });
         res.send({ error: false, data });
     } catch (err) {
         console.log(`[precipitationDataController | update] ERROR: ${err}`);

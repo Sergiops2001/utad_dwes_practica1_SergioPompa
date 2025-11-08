@@ -2,7 +2,7 @@
 GET http://localhost:3000/api/v1/meteorologyinfo/ HTTP/1.1
 
 ### GET METEOROLOGY INFO BY ID
-GET http://localhost:3000/api/v1/meteorologyinfo/6908f7718fad9390079d11cd HTTP/1.1
+GET http://localhost:3000/api/v1/meteorologyinfo/690f70d599b398bdacfb3c5e HTTP/1.1
 
 ### POST NEW METEOROLOGY INFO
 POST http://localhost:3000/api/v1/meteorologyinfo/ HTTP/1.1
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 
 ### PUT METEOROLOGY INFO BY ID    
-PUT http://localhost:3000/api/v1/meteorologyinfo/6908f7718fad9390079d11cd HTTP/1.1
+PUT http://localhost:3000/api/v1/meteorologyinfo/690f70d599b398bdacfb3c5e HTTP/1.1
 Content-Type: application/json
 
 {
@@ -36,4 +36,4 @@ Content-Type: application/json
 
 
 ### DELETE METEOROLOGY INFO BY ID
-DELETE http://localhost:3000/api/v1/meteorologyinfo/6908f7718fad9390079d11cd HTTP/1.1
+DELETE http://localhost:3000/api/v1/meteorologyinfo/690f70d599b398bdacfb3c5e HTTP/1.1

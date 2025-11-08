@@ -1,7 +1,7 @@
 /*
     Título: Image Route
     Nombre: Sergio Pompa
-    Descripción: Declaración de las rutas de usuario
+    Descripción: Declaración de las rutas de image
 */
 
 /* Importado de Bibliotecas */

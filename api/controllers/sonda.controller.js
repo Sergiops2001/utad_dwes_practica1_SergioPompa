@@ -41,7 +41,7 @@ const createSonda = async (req, res) => {
         //Obtenemos los datos del body 
         const body = req.body;
         //Introducimos el nuevo usuario en la base de datos y si ya está repetido el username o el email daría error
-        const data = await sondaModel.create(body);
+        const data = await sondaModel.create(body,{ new: true });
         res.send({ error: false, data });
     }
     catch (err) {
@@ -57,7 +57,7 @@ const updateSonda = async (req, res) => {
         const id = req.params.id;
         const body = req.body;
         //Tratamos de realizar la actualización en la base de datos
-        const data = await sondaModel.findByIdAndUpdate(id,body);
+        const data = await sondaModel.findByIdAndUpdate(id,body, { new: true });
         res.send({ error: false, data });
     }
     catch (err) {

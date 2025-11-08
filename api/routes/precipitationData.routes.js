@@ -1,7 +1,7 @@
 /*
-    Título: User Route
+    Título: precipitationData Route
     Nombre: Sergio Pompa
-    Descripción: Declaración de las rutas de usuario
+    Descripción: Declaración de las rutas de precipitationData
 */
 
 /* Importado de Bibliotecas */

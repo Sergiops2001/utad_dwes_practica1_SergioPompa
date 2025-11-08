@@ -32,7 +32,7 @@ const createMeteorology = async (req, res) => {
 
 const updateMeteorology = async (req, res) => {
     try {
-        const data = await meteorologyModel.findByIdAndUpdate(req.params.id, req.body);
+        const data = await meteorologyModel.findByIdAndUpdate(req.params.id, req.body,{ new: true });
         res.send({ error: false, data });
     } catch (err) {
         console.log(`[meteorologyinfoController | update] ERROR: ${err}`);

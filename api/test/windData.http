@@ -2,7 +2,7 @@
 GET http://localhost:3000/api/v1/windData/ HTTP/1.1
 
 ### GET WIND DATA  BY ID
-GET http://localhost:3000/api/v1/windData/6908fae68fad9390079d11f3 HTTP/1.1
+GET http://localhost:3000/api/v1/windData/690f719199b398bdacfb3c82 HTTP/1.1
 
 ### POST NEW WIND DATA 
 POST http://localhost:3000/api/v1/windData/ HTTP/1.1
@@ -18,11 +18,11 @@ Content-Type: application/json
 }
 
 ### PUT WIND DATA  BY ID    
-PUT http://localhost:3000/api/v1/windData/6908fae68fad9390079d11f3 HTTP/1.1
+PUT http://localhost:3000/api/v1/windData/690f719199b398bdacfb3c82 HTTP/1.1
 Content-Type: application/json
 
 {
-    "windSpeed": 14.8,
+    "windSpeed": 15.8,
     "windGustSpeed": 22.3,
     "windDirection": "Sureste (120°)",
     "sondaName": "anemometro_izana@aemet.es",
@@ -33,4 +33,4 @@ Content-Type: application/json
 
 
 ### DELETE WIND DATA  BY ID
-DELETE http://localhost:3000/api/v1/windData/6908fae68fad9390079d11f3 HTTP/1.1
+DELETE http://localhost:3000/api/v1/windData/690f719199b398bdacfb3c82 HTTP/1.1

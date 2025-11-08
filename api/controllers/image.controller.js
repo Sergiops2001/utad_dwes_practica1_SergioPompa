@@ -57,7 +57,7 @@ const updateImage = async (req, res) => {
         const id = req.params.id;
         const body = req.body;
         //Tratamos de realizar la actualización en la base de datos
-        const data = await imageModel.findByIdAndUpdate(id,body);
+        const data = await imageModel.findByIdAndUpdate(id,body, { new: true });
         res.send({ error: false, data });
     }
     catch (err) {

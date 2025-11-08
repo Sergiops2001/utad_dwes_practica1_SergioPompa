@@ -2,14 +2,14 @@
 GET http://localhost:3000/api/v1/image/ HTTP/1.1
 
 ### GET IMAGE BY ID
-GET http://localhost:3000/api/v1/image/6908f6388fad9390079d11c3 HTTP/1.1
+GET http://localhost:3000/api/v1/image/690f6a9e01caeb6a5cc38e8d HTTP/1.1
 
 ### POST NEW IMAGE
 POST http://localhost:3000/api/v1/image/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "location": "Tenerife",
+    "location": "Alicante",
     "imageUrl": "https://data.aemet.es/image/izana/.jpg",
     "date": "2025-11-03",
     "hour": "10:47:00"
@@ -19,11 +19,11 @@ Content-Type: application/json
 
 
 ### PUT IMAGE BY ID    
-PUT http://localhost:3000/api/v1/image/6908f6388fad9390079d11c3 HTTP/1.1
+PUT http://localhost:3000/api/v1/image/690f70b499b398bdacfb3c58 HTTP/1.1
 Content-Type: application/json
 
 {
-    "location": "Izaña, Tenerife",
+    "location": "Garachico, Tenerife",
     "imageUrl": "https://data.aemet.es/images/izana/2025-11-03T10-47-00Z.jpg",
     "dateAndHour": "2025-11-03T10:47:00Z"
 }
@@ -31,4 +31,4 @@ Content-Type: application/json
 
 
 ### DELETE IMAGE BY ID
-DELETE http://localhost:3000/api/v1/image/6908f6388fad9390079d11c3 HTTP/1.1
+DELETE http://localhost:3000/api/v1/image/690f70b499b398bdacfb3c58 HTTP/1.1

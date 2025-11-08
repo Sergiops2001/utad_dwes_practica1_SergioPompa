@@ -2,7 +2,7 @@
 
 /*
     Título: App
-    Nombre: Héctor Paredes Benavides
+    Nombre: Sergio Pompa Sierra
     Descripción: Fichero de arranque del backend
 */
 

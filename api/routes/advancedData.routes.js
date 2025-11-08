@@ -1,7 +1,7 @@
 /*
-    Título: User Route
+    Título: advancedData Route
     Nombre: Sergio Pompa
-    Descripción: Declaración de las rutas de usuario
+    Descripción: Declaración de las rutas de advancedData
 */
 
 /* Importado de Bibliotecas */

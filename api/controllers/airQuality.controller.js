@@ -32,7 +32,7 @@ const createAirQuality = async (req, res) => {
 
 const updateAirQuality = async (req, res) => {
     try {
-        const data = await airQualityModel.findByIdAndUpdate(req.params.id, req.body);
+        const data = await airQualityModel.findByIdAndUpdate(req.params.id, req.body,{ new: true });
         res.send({ error: false, data });
     } catch (err) {
         console.log(`[airQualityController | update] ERROR: ${err}`);

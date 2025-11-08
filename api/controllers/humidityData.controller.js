@@ -32,7 +32,7 @@ const createHumidity = async (req, res) => {
 
 const updateHumidity = async (req, res) => {
     try {
-        const data = await humidityModel.findByIdAndUpdate(req.params.id, req.body);
+        const data = await humidityModel.findByIdAndUpdate(req.params.id, req.body,{ new: true });
         res.send({ error: false, data });
     } catch (err) {
         console.log(`[humidityController | update] ERROR: ${err}`);

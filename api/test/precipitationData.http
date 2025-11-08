@@ -2,7 +2,7 @@
 GET http://localhost:3000/api/v1/precipitationData/ HTTP/1.1
 
 ### GET PRECIPITATION DATA BY ID
-GET http://localhost:3000/api/v1/precipitationData/6908f9098fad9390079d11dd HTTP/1.1
+GET http://localhost:3000/api/v1/precipitationData/690f70ee99b398bdacfb3c65 HTTP/1.1
 
 ### POST NEW PRECIPITATION DATA
 POST http://localhost:3000/api/v1/precipitationData/ HTTP/1.1
@@ -18,7 +18,7 @@ Content-Type: application/json
     }
 
 ### PUT PRECIPITATION DATA BY ID    
-PUT http://localhost:3000/api/v1/precipitationData/6908f9098fad9390079d11dd HTTP/1.1
+PUT http://localhost:3000/api/v1/precipitationData/690f70ee99b398bdacfb3c65 HTTP/1.1
 Content-Type: application/json
 
     {
@@ -33,4 +33,4 @@ Content-Type: application/json
 
 
 ### DELETE PRECIPITATION DATA BY ID
-DELETE http://localhost:3000/api/v1/precipitationData/6908f9098fad9390079d11dd HTTP/1.1
+DELETE http://localhost:3000/api/v1/precipitationData/690f70ee99b398bdacfb3c65 HTTP/1.1

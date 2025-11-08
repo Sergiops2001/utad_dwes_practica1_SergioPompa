@@ -2,7 +2,7 @@
 GET http://localhost:3000/api/v1/airQuality/ HTTP/1.1
 
 ### GET AIR QUALITY BY ID
-GET http://localhost:3000/api/v1/airQuality/6908f0d4c79ea5741a2916db HTTP/1.1
+GET http://localhost:3000/api/v1/airQuality/690f705999b398bdacfb3c46 HTTP/1.1
 
 ### POST NEW AIR QUALITY
 POST http://localhost:3000/api/v1/airQuality/ HTTP/1.1
@@ -23,7 +23,7 @@ Content-Type: application/json
 
 
 ### PUT AIR QUALITY BY ID    
-PUT http://localhost:3000/api/v1/airQuality/6908f0d4c79ea5741a2916db HTTP/1.1
+PUT http://localhost:3000/api/v1/airQuality/690f705999b398bdacfb3c46 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -40,4 +40,4 @@ Content-Type: application/json
 }
 
 ### DELETE AIR QUALITY BY ID
-DELETE http://localhost:3000/api/v1/airQuality/6908f0d4c79ea5741a2916db HTTP/1.1
+DELETE http://localhost:3000/api/v1/airQuality/690f6efb99b398bdacfb3c0c HTTP/1.1
