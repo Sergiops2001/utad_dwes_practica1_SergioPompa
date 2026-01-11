@@ -2,36 +2,35 @@
 GET http://localhost:3000/api/v1/sonda/ HTTP/1.1
 
 ### GET SONDA BY ID
-GET http://localhost:3000/api/v1/sonda/6908f9bc8fad9390079d11e8 HTTP/1.1
+GET http://localhost:3000/api/v1/sonda/693f0b11d18a8e68cd683edf HTTP/1.1
 
 ### POST NEW SONDA
 POST http://localhost:3000/api/v1/sonda/ HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3MzkwOTUsImV4cCI6MTc2NTc0NjI5NX0._CylvzLPtzNrzggYa6qVtampZlJH_ugZLAEEuL0hw7s
 
-[
-  {
+{
     "name": "brewer150",
     "description": "Espectrofotómetro Brewer del Observatorio de Izaña (Tenerife), usado para mediciones de ozono total y radiación UV.",
     "location": "Izaña, Tenerife"
-  },
-  {
-    "name": "brewer185",
-    "description": "Instrumento de referencia para la calibración de la red EUBREWNET en el Centro de Investigación Atmosférica de Valladolid.",
-    "location": "Valladolid"
-  }
-]
+}
 
 ### PUT SONDA BY ID    
 PUT http://localhost:3000/api/v1/sonda/690f713199b398bdacfb3c72 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3MzkwOTUsImV4cCI6MTc2NTc0NjI5NX0._CylvzLPtzNrzggYa6qVtampZlJH_ugZLAEEuL0hw7s
 
-  {
+{
     "name": "brewer100",
     "description": "Espectrofotómetro Brewer del Observatorio de Izaña (Tenerife), usado para mediciones de ozono total y radiación UV.",
     "location": "Izaña, Tenerife"
-  }
-
-
+}
 
 ### DELETE SONDA BY ID
 DELETE http://localhost:3000/api/v1/sonda/690f713199b398bdacfb3c72 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3MzkwOTUsImV4cCI6MTc2NTc0NjI5NX0._CylvzLPtzNrzggYa6qVtampZlJH_ugZLAEEuL0hw7s
+
+### GET SONDA BY LOCATION
+GET http://localhost:3000/api/v1/sonda/location/Izaña, Tenerife HTTP/1.1
+

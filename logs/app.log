@@ -1,0 +1,231 @@
+LOG(2026-01-06T18:22:39.381Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-06T18:27:02.540Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-06T18:29:09.712Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-06T18:30:39.396Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-06T18:30:39.399Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-06T18:30:39.413Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-06T18:30:39.415Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-06T19:00:54.194Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-06T19:00:54.197Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-06T19:00:54.219Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-06T19:00:54.221Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-06T19:01:59.776Z) info: [APP] ℹ️ Info: Esto es info level
+LOG(2026-01-06T19:01:59.779Z) warn: [APP] ⚠️ Warn: Esto es warn level
+LOG(2026-01-06T19:01:59.780Z) error: [APP] ❌ Error: Esto es error level
+LOG(2026-01-06T19:02:06.402Z) error: [APP] Test endpoint: Server error llamado
+LOG(2026-01-06T19:02:55.760Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-06T19:02:55.762Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-06T19:02:55.782Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-06T19:02:55.784Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T17:32:46.240Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T17:32:46.244Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T17:32:46.279Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T17:32:46.281Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T17:45:08.413Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T17:45:08.417Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T17:45:08.489Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T17:45:08.517Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T17:49:16.343Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T17:49:16.348Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T17:49:16.384Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T17:49:16.386Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T18:01:48.192Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T18:01:48.195Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T18:01:48.230Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T18:01:48.234Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T18:40:54.951Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T18:40:54.954Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T18:40:54.989Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T18:40:54.993Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T18:47:55.630Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T18:47:55.633Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T18:47:55.672Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T18:47:55.676Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T19:07:45.850Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T19:07:45.853Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T19:07:45.880Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T19:07:45.883Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T19:11:53.684Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T19:11:53.687Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T19:11:53.719Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T19:11:53.724Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T19:16:56.282Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T19:16:56.286Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T19:16:56.316Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T19:16:56.323Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-07T19:18:23.079Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-07T19:18:23.082Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-07T19:18:23.098Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-07T19:18:23.103Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-08T17:38:45.993Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-08T17:38:46.008Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-08T17:38:46.094Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-08T17:38:46.104Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-08T18:36:20.512Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-08T18:36:20.515Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-08T18:36:20.546Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-08T18:36:20.550Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:11:06.395Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:11:06.397Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:11:06.417Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:11:06.418Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:11:34.116Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:11:34.119Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:11:34.147Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:11:34.152Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:11:34.856Z) error: [APP] [user.controller | registerUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-10T11:15:19.483Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:15:19.485Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:15:19.515Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:15:19.518Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:15:20.188Z) error: [APP] [user.controller | registerUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-10T11:15:59.652Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:15:59.654Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:15:59.671Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:15:59.676Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:16:00.255Z) error: [APP] [user.controller | registerUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-10T11:19:19.116Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:19:19.118Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:19:19.135Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:19:19.139Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:19:19.732Z) error: [APP] [user.controller | registerUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: fullName_1 dup key: { fullName: "test" }
+LOG(2026-01-10T11:19:55.585Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:19:55.587Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:19:55.608Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:19:55.614Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:26:59.681Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:26:59.683Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:26:59.703Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:26:59.705Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:27:52.055Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:27:52.060Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:27:52.115Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:27:52.121Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:29:48.333Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:29:48.336Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:29:48.352Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:29:48.357Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:32:35.605Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:32:35.607Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:32:35.630Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:32:35.633Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:34:28.895Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:34:28.897Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:34:28.917Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:34:28.920Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:39:02.976Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:39:02.979Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:39:02.996Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:39:03.001Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:40:07.529Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:40:07.531Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:40:07.553Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:40:07.557Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-10T11:43:05.035Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-10T11:43:05.038Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-10T11:43:05.057Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-10T11:43:05.063Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:39:34.297Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:39:34.299Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:39:34.317Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:39:34.323Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:40:01.829Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:40:01.831Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:40:01.846Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:40:01.849Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:45:29.145Z) error: [APP] [user.controller | createUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "Fran" }
+LOG(2026-01-11T13:45:31.561Z) error: [APP] [user.controller | createUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "Fran" }
+LOG(2026-01-11T13:47:12.419Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:47:12.421Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:47:12.440Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:47:12.444Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:47:34.460Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:47:34.462Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:47:34.479Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:47:34.485Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:49:13.790Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:49:13.794Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:49:13.831Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:49:13.835Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:50:12.217Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:50:12.221Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:50:12.239Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:50:12.242Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:52:26.149Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:52:26.152Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:52:26.179Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:52:26.184Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:53:22.492Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:53:22.495Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:53:22.515Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:53:22.519Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:53:38.907Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:53:38.910Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:53:38.944Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:53:38.953Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:53:55.804Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:53:55.808Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:53:55.836Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:53:55.839Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:54:24.270Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:54:24.272Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:54:24.285Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:54:24.290Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:57:22.858Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:57:22.861Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:57:22.889Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:57:22.897Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:57:35.357Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:57:35.360Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:57:35.389Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:57:35.395Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:57:36.946Z) error: [APP] [user.controller | createUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-11T13:57:37.070Z) error: [APP] [user.controller | updateUser] ERROR: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-11T13:58:20.496Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T13:58:20.500Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T13:58:20.532Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T13:58:20.534Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T13:59:35.153Z) error: [APP] [user.controller | createUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "Gonzalo" }
+LOG(2026-01-11T14:02:10.907Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T14:02:10.910Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T14:02:10.942Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T14:02:10.950Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T14:02:12.351Z) error: [APP] [user.controller | createUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-11T14:02:12.444Z) error: [APP] [user.controller | updateUser] ERROR: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-11T14:05:12.531Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T14:05:12.533Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T14:05:12.550Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T14:05:12.554Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T14:05:14.018Z) error: [APP] [user.controller | createUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-11T14:05:14.169Z) error: [APP] [user.controller | updateUser] ERROR: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "test" }
+LOG(2026-01-11T14:05:40.047Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T14:05:40.050Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T14:05:40.082Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T14:05:40.088Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T14:05:41.951Z) error: [APP] [user.controller | updateUser] ERROR: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.users index: fullName_1 dup key: { fullName: "testing" }
+LOG(2026-01-11T14:06:17.174Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T14:06:17.177Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T14:06:17.199Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T14:06:17.202Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T14:06:18.551Z) error: [APP] [user.controller | createUser] ERROR: MongoServerError: E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "testing33" }
+LOG(2026-01-11T14:06:18.727Z) error: [APP] [user.controller | updateUser] ERROR: MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: test.users index: fullName_1 dup key: { fullName: "testing" }
+LOG(2026-01-11T14:14:03.323Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T14:14:03.326Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T14:14:03.355Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T14:14:03.360Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T16:08:56.276Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T16:08:56.278Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T16:08:56.299Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T16:08:56.301Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T16:09:52.977Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T16:09:52.980Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T16:09:52.997Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T16:09:53.001Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T16:11:01.100Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T16:11:01.102Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T16:11:01.130Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T16:11:01.134Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-11T16:15:30.341Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-11T16:15:30.344Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-11T16:15:30.367Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-11T16:15:30.370Z) info: [APP] Servidor escuchando en el puerto 3000

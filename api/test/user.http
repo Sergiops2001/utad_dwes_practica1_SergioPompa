@@ -1,32 +1,58 @@
+### REGISTER USER
+POST http://localhost:3000/api/v1/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "NuevoUsfuario",
+    "fullName": "Usuario Regfistrado",
+    "description": "Soy un usuario nuevo",
+    "email": "nuevousuariof@gmail.com",
+    "password": "123456"
+}
+
+### LOGIN USER
+POST http://localhost:3000/api/v1/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "nuevousuario@gmail.com",
+    "password": "123456"
+}
+
 ### GET ALL USERS 
 GET http://localhost:3000/api/v1/user/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjgxMzg4MzEsImV4cCI6MTc2ODE0NjAzMX0.-fybrE1KRVW15XhNXAE0vr-WEQVv5DAxvIqrnRyL8oQ
 
 ### GET USER BY ID
-GET http://localhost:3000/api/v1/user/690f716299b398bdacfb3c7a HTTP/1.1
+GET http://localhost:3000/api/v1/user/6963a9866747bf914703e9ad HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjgxMzg4MzEsImV4cCI6MTc2ODE0NjAzMX0.-fybrE1KRVW15XhNXAE0vr-WEQVv5DAxvIqrnRyL8oQ
 
 ### POST NEW USER 
 POST http://localhost:3000/api/v1/user/ HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjgxMzg4MzEsImV4cCI6MTc2ODE0NjAzMX0.-fybrE1KRVW15XhNXAE0vr-WEQVv5DAxvIqrnRyL8oQ
 
 {
-    "username": "Juan",
-    "fullName": "juan perez",
+    "username": "Sirius",
+    "fullName": "Sirius Black",
     "description": "Usuario de prueba",
-    "email": "juanperez@gmail.com",
-    "password": "1234"
+    "email": "siriusblack@gmail.com",
+    "password": "123456"
 }
 
 ### PUT USER BY ID
-PUT http://localhost:3000/api/v1/user/690f716299b398bdacfb3c7a HTTP/1.1
+PUT http://localhost:3000/api/v1/user/6963acd9c787992fcca2738f HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjgxMzg4MzEsImV4cCI6MTc2ODE0NjAzMX0.-fybrE1KRVW15XhNXAE0vr-WEQVv5DAxvIqrnRyL8oQ
 
 {
-    "username": "Juanito",
-    "fullName": "Juanito perez",
-    "description": "Usuario de prueba",
-    "email": "Juanitoperez@gmail.com",
+    "username": "Sirius Black",
+    "fullName": "Sirius Black",
+    "description": "Usuario de Hogwarts",
+    "email": "siriusblack@gmail.com",
     "password": "1234"
 }
 
 ### DELETE USER BY ID
-DELETE http://localhost:3000/api/v1/user/690f716299b398bdacfb3c7a HTTP/1.1
+DELETE http://localhost:3000/api/v1/user/6963acd9c787992fcca2738f HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjgxMzg4MzEsImV4cCI6MTc2ODE0NjAzMX0.-fybrE1KRVW15XhNXAE0vr-WEQVv5DAxvIqrnRyL8oQ

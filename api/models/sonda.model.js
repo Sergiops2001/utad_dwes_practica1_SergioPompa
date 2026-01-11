@@ -23,7 +23,11 @@ const SondasScheme = new mongoose.Schema(
         },
         location: {
             type: String,
-            required: true           
+            required: true
+        },
+        deleted: {
+            type: Boolean,
+            default: false
         }
     },
     {

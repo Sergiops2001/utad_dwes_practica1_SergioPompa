@@ -19,20 +19,24 @@ const UsersScheme = new mongoose.Schema(
         fullName: {
             type: String,
             unique: true,
-            required: true           
+            required: true
         },
         description: {
-            type: String, 
+            type: String,
             default: ""
         },
         email: {
             type: String,
             unique: true,
-            required: true            
+            required: true
         },
         password: {
             type: String,
             required: true
+        },
+        deleted: {
+            type: Boolean,
+            default: false
         }
     },
     {

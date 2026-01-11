@@ -13,7 +13,7 @@ const AirQualityScheme = new mongoose.Schema(
     {
         airQualityIndex: {
             type: Number,
-            required: true           
+            required: true
         },
         ozoneAmount: {
             type: Number,
@@ -50,10 +50,14 @@ const AirQualityScheme = new mongoose.Schema(
         hourMedition: {
             type: String,
             required: true
+        },
+        deleted: {
+            type: Boolean,
+            default: false
         }
     },
     {
-        timestamps: true,   
+        timestamps: true,
         versionKey: false
     }
 );

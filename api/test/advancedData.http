@@ -7,6 +7,7 @@ GET http://localhost:3000/api/v1/advancedData/690f6ea799b398bdacfb3bfe HTTP/1.1
 ### POST NEW ADVANCED DATA 
 POST http://localhost:3000/api/v1/advancedData/ HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU4MTg5OTIsImV4cCI6MTc2NTgyNjE5Mn0.1_EPwbunIPxwVwc8v6iyJEFbwm2s3kh86DXpiM1i0oY
 
 {
     "airPressure": 5000.25,
@@ -20,6 +21,7 @@ Content-Type: application/json
 ### PUT ADVANCED DATA BY ID    
 PUT http://localhost:3000/api/v1/advancedData/690f703a99b398bdacfb3c40 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU4MTg5OTIsImV4cCI6MTc2NTgyNjE5Mn0.1_EPwbunIPxwVwc8v6iyJEFbwm2s3kh86DXpiM1i0oY
 
 {
     "airPressure": 1057.58,
@@ -32,3 +34,9 @@ Content-Type: application/json
 
 ### DELETE ADVANCED DATA BY ID
 DELETE http://localhost:3000/api/v1/advancedData/690f703a99b398bdacfb3c40 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU4MTg5OTIsImV4cCI6MTc2NTgyNjE5Mn0.1_EPwbunIPxwVwc8v6iyJEFbwm2s3kh86DXpiM1i0oY
+
+### GET ADVANCED SEARCH
+GET http://localhost:3000/api/v1/advancedData/advanced?sondaName=brewer257@izana.aemet.es&startDate=2025-11-01&endDate=2025-11-30 HTTP/1.1
+

@@ -13,7 +13,7 @@ const PrecipitationDataScheme = new mongoose.Schema(
     {
         precipitationType: {
             type: String,
-            required: true           
+            required: true
         },
         precipitationProbability: {
             type: Number,
@@ -34,6 +34,10 @@ const PrecipitationDataScheme = new mongoose.Schema(
         hourMedition: {
             type: String,
             required: true
+        },
+        deleted: {
+            type: Boolean,
+            default: false
         }
     },
     {

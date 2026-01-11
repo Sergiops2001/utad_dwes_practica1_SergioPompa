@@ -13,7 +13,7 @@ const MeteorologyInfoScheme = new mongoose.Schema(
     {
         temperature: {
             type: Number,
-            required: true           
+            required: true
         },
         windChill: {
             type: Number,
@@ -34,6 +34,10 @@ const MeteorologyInfoScheme = new mongoose.Schema(
         hourMedition: {
             type: String,
             required: true
+        },
+        deleted: {
+            type: Boolean,
+            default: false
         }
     },
     {

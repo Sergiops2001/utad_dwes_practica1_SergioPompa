@@ -7,20 +7,19 @@ GET http://localhost:3000/api/v1/image/690f6a9e01caeb6a5cc38e8d HTTP/1.1
 ### POST NEW IMAGE
 POST http://localhost:3000/api/v1/image/ HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3NDY3ODcsImV4cCI6MTc2NTc1Mzk4N30.OdKUPTG8aDMSf8AT2skgerVmF9CGrH5cbTcur_8Ha6M
 
 {
-    "location": "Alicante",
+    "location": "Valencia",
     "imageUrl": "https://data.aemet.es/image/izana/.jpg",
     "date": "2025-11-03",
     "hour": "10:47:00"
 }
 
-
-
-
 ### PUT IMAGE BY ID    
 PUT http://localhost:3000/api/v1/image/690f70b499b398bdacfb3c58 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3MzkwOTUsImV4cCI6MTc2NTc0NjI5NX0._CylvzLPtzNrzggYa6qVtampZlJH_ugZLAEEuL0hw7s
 
 {
     "location": "Garachico, Tenerife",
@@ -32,3 +31,7 @@ Content-Type: application/json
 
 ### DELETE IMAGE BY ID
 DELETE http://localhost:3000/api/v1/image/690f70b499b398bdacfb3c58 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3MzkwOTUsImV4cCI6MTc2NTc0NjI5NX0._CylvzLPtzNrzggYa6qVtampZlJH_ugZLAEEuL0hw7s
+
+### GET ADVANCED DATA IMAGES
+GET http://localhost:3000/api/v1/image/advanced?location=Valencia&startDate=2025-11-03&endDate=2025-11-03 HTTP/1.1

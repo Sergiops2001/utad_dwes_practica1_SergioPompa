@@ -34,12 +34,17 @@ const AdvancedDataScheme = new mongoose.Schema(
         hourMedition: {
             type: String,
             required: true
-        }
+        },
+        deleted: {
+            type: Boolean,
+            default: false
+        },
+
     },
     {
-        timestamps: true,   
+        timestamps: true,
         versionKey: false
     }
-);  
+);
 /* Exportado de Módulo */
 module.exports = mongoose.model("datoavanzado", AdvancedDataScheme);

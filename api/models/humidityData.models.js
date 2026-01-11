@@ -13,7 +13,7 @@ const HumidityDataScheme = new mongoose.Schema(
     {
         airHumidity: {
             type: Number,
-            required: true           
+            required: true
         },
         DewPoint: {
             type: Number,
@@ -30,10 +30,14 @@ const HumidityDataScheme = new mongoose.Schema(
         hourMedition: {
             type: String,
             required: true
+        },
+        deleted: {
+            type: Boolean,
+            default: false
         }
     },
     {
-        timestamps: true,   
+        timestamps: true,
         versionKey: false
     }
 );

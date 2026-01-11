@@ -1,0 +1,11 @@
+LOG(2026-01-07T19:18:24.330Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: jwt malformed
+LOG(2026-01-07T19:18:24.378Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: jwt malformed
+LOG(2026-01-10T11:11:35.206Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: jwt malformed
+LOG(2026-01-10T11:11:35.249Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: jwt malformed
+LOG(2026-01-10T11:15:20.528Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: jwt malformed
+LOG(2026-01-10T11:15:20.574Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: jwt malformed
+LOG(2026-01-11T13:40:04.018Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: TokenExpiredError: jwt expired
+LOG(2026-01-11T13:44:42.736Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: invalid token
+LOG(2026-01-11T13:45:10.105Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: invalid token
+LOG(2026-01-11T13:59:10.714Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: invalid token
+LOG(2026-01-11T14:00:09.853Z) error: [JWT] [handleJWT.util | verifyToken] ERROR: JsonWebTokenError: invalid token

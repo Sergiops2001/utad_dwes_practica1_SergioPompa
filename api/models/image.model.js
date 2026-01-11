@@ -14,7 +14,7 @@ const ImageScheme = new mongoose.Schema(
     {
         location: {
             type: String,
-            required: true           
+            required: true
         },
         imageUrl: {
             type: String,
@@ -27,6 +27,10 @@ const ImageScheme = new mongoose.Schema(
         hour: {
             type: String,
             required: true
+        },
+        deleted: {
+            type: Boolean,
+            default: false
         }
     },
     {

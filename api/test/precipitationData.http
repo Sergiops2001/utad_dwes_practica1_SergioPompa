@@ -7,6 +7,7 @@ GET http://localhost:3000/api/v1/precipitationData/690f70ee99b398bdacfb3c65 HTTP
 ### POST NEW PRECIPITATION DATA
 POST http://localhost:3000/api/v1/precipitationData/ HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3MzkwOTUsImV4cCI6MTc2NTc0NjI5NX0._CylvzLPtzNrzggYa6qVtampZlJH_ugZLAEEuL0hw7s
 
     {
     "precipitationType": "Lluvia ligera",
@@ -20,6 +21,7 @@ Content-Type: application/json
 ### PUT PRECIPITATION DATA BY ID    
 PUT http://localhost:3000/api/v1/precipitationData/690f70ee99b398bdacfb3c65 HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3MzkwOTUsImV4cCI6MTc2NTc0NjI5NX0._CylvzLPtzNrzggYa6qVtampZlJH_ugZLAEEuL0hw7s
 
     {
     "precipitationType": "Lluvia abundante",
@@ -34,3 +36,7 @@ Content-Type: application/json
 
 ### DELETE PRECIPITATION DATA BY ID
 DELETE http://localhost:3000/api/v1/precipitationData/690f70ee99b398bdacfb3c65 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTNlYjQyOWNkYmE2YTAwZDRmNmZmZjIiLCJpYXQiOjE3NjU3MzkwOTUsImV4cCI6MTc2NTc0NjI5NX0._CylvzLPtzNrzggYa6qVtampZlJH_ugZLAEEuL0hw7s
+
+### GET ADVANCED SEARCH
+GET http://localhost:3000/api/v1/precipitationData/advanced?sondaName=brewer257@izana.aemet.es&startDate=2025-11-01&endDate=2025-11-30 HTTP/1.1

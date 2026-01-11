@@ -13,7 +13,7 @@ const WindDataScheme = new mongoose.Schema(
     {
         windSpeed: {
             type: Number,
-            required: true           
+            required: true
         },
         windGustSpeed: {
             type: Number,
@@ -34,6 +34,10 @@ const WindDataScheme = new mongoose.Schema(
         hourMedition: {
             type: String,
             required: true
+        },
+        deleted: {
+            type: Boolean,
+            default: false
         }
     },
     {
