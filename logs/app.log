@@ -229,3 +229,110 @@ LOG(2026-01-11T16:15:30.341Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cl
 LOG(2026-01-11T16:15:30.344Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
 LOG(2026-01-11T16:15:30.367Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
 LOG(2026-01-11T16:15:30.370Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-29T19:08:49.276Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-29T19:08:49.278Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-29T19:08:49.299Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-29T19:08:49.303Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-29T19:10:51.166Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-01-29T19:10:51.170Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-29T19:10:51.170Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-29T19:10:51.184Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-29T19:10:51.185Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-29T19:14:34.564Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-01-29T19:14:34.568Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-29T19:14:34.569Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-29T19:14:34.584Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-29T19:14:34.585Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-29T19:19:55.605Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-01-29T19:19:55.610Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-29T19:19:55.610Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-29T19:19:55.628Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-29T19:19:55.629Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-29T19:40:51.937Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-01-29T19:40:51.943Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-29T19:40:51.943Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-29T19:40:51.970Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-29T19:40:51.972Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-29T19:41:08.594Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-01-29T19:41:08.598Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-29T19:41:08.599Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-29T19:41:08.618Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-29T19:41:08.619Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-29T19:52:35.825Z) error: [APP] Validation Error:
+LOG(2026-01-29T19:53:09.708Z) error: [APP] Validation Error:
+LOG(2026-01-29T19:54:56.433Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-01-29T19:54:56.437Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-01-29T19:54:56.438Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-01-29T19:54:56.457Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-01-29T19:54:56.458Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-01-29T19:55:19.300Z) error: [APP] [temperatureDataController | create] ERROR: ValidationError: hourMedition: Path `hourMedition` is required., dateMedition: Path `dateMedition` is required., sondaName: Path `sondaName` is required., value: Path `value` is required.
+LOG(2026-02-01T18:46:00.496Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-01T18:46:00.503Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-01T18:46:00.504Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-01T18:46:00.552Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-01T18:46:00.554Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-02-01T19:11:17.712Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-01T19:11:17.718Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-01T19:11:17.768Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-01T19:19:08.688Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-01T19:19:08.693Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-01T19:19:08.728Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-01T19:19:09.322Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-01T19:19:09.324Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-02-01T19:28:32.294Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-01T19:28:32.331Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-01T19:28:32.497Z) info: [APP] Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-01T19:28:33.695Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-01T19:28:33.706Z) info: [APP] Servidor escuchando en el puerto 3000
+LOG(2026-02-01T19:34:41.609Z) error: [APP] Validation Error:
+LOG(2026-02-02T13:53:25.105Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-02T13:53:25.108Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-02T13:53:25.153Z) info: [APP] 🔌 Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-02T13:53:25.750Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-02T13:53:25.759Z) info: [APP] 🔐 Servidor HTTPS escuchando en el puerto 3000
+LOG(2026-02-02T13:53:25.760Z) info: [APP] 🔗 Accede a: https://localhost:3000
+LOG(2026-02-02T16:40:40.536Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-02T16:40:40.539Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-02T16:40:40.566Z) info: [APP] 🔌 Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-02T16:40:41.072Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-02T16:40:41.079Z) info: [APP] 🔐 Servidor HTTPS escuchando en el puerto 3000
+LOG(2026-02-02T16:40:41.079Z) info: [APP] 🔗 Accede a: https://localhost:3000
+LOG(2026-02-07T15:45:40.066Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-07T15:45:40.068Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-07T15:45:40.090Z) info: [APP]  Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-07T15:45:40.633Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-07T15:45:40.637Z) info: [APP]  Servidor HTTPS escuchando en el puerto 3000
+LOG(2026-02-07T15:45:40.638Z) info: [APP]  Accede a: https://localhost:3000
+LOG(2026-02-07T15:47:19.272Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-07T15:47:19.274Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-07T15:47:19.298Z) info: [APP]  Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-07T15:47:19.874Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-07T15:47:19.876Z) info: [APP]  Servidor HTTP escuchando en el puerto 3000
+LOG(2026-02-07T15:47:19.877Z) info: [APP]  Accede a: http://localhost:3000
+LOG(2026-02-07T15:48:41.888Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:48:59.158Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:53:09.716Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:54:09.707Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:54:21.096Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:54:36.042Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:54:41.937Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:56:38.125Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-07T15:56:38.128Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-07T15:56:38.708Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-07T15:56:46.745Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:59:26.876Z) error: [APP] Validation Error:
+LOG(2026-02-07T15:59:29.498Z) error: [APP] Validation Error:
+LOG(2026-02-07T16:01:47.297Z) error: [APP] Validation Error:
+LOG(2026-02-07T16:02:45.094Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-07T16:02:45.096Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-07T16:02:45.115Z) info: [APP]  Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-07T16:02:45.621Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-07T16:02:45.623Z) info: [APP]  Servidor HTTP escuchando en el puerto 3000
+LOG(2026-02-07T16:02:45.623Z) info: [APP]  Accede a: http://localhost:3000
+LOG(2026-02-07T16:03:13.079Z) error: [APP] Validation Error:
+LOG(2026-02-07T16:07:56.750Z) info: [APP] mongodb+srv://sergiops:tiempoAPI@mi-cluster.aglyjxv.mongodb.net/?appName=mi-cluster
+LOG(2026-02-07T16:07:56.752Z) info: [APP] [MongoDB Controller] Inicializando la conexión con la base de datos...
+LOG(2026-02-07T16:07:56.774Z) info: [APP]  Servidor WebSocket escuchando en el puerto 8080
+LOG(2026-02-07T16:07:57.393Z) info: [APP] [MongoDB Controller] Conexión con la base de datos inicializada con éxito.
+LOG(2026-02-07T16:07:57.398Z) info: [APP]  Servidor HTTPS escuchando en el puerto 3000
+LOG(2026-02-07T16:07:57.398Z) info: [APP]  Accede a: https://localhost:3000

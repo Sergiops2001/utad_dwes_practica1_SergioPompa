@@ -1,7 +1,40 @@
 const airQualityModel = require("../models/airQuality.models");
+const sondaModel = require("../models/sonda.model");
 const { matchedData } = require("express-validator");
 const { handleHTTPResponse, handleHTTPError, INTERNAL_SERVER_ERROR } = require("../utilities/handleResponse.util");
 const { appLogger } = require("../config/winstonLogger.config");
+
+// Importación de utilidades
+const { emitirNotificacion } = require("../../ws/events");
+const { getFieldStats } = require("../utilities/stats.util");
+
+/**
+ * Obtiene los targets de notificación (sonda y su localización)
+ */
+const getNotificationTargets = async (sondaName) => {
+    const sonda = await sondaModel.findOne({ name: sondaName, deleted: false });
+    const targets = [sondaName];
+    if (sonda && sonda.location) {
+        targets.push(sonda.location);
+    }
+    return targets;
+};
+
+/**
+ * Obtiene estadísticas para múltiples campos
+ */
+const getAirQualityStats = async (sondaName) => {
+    const filter = { sondaName, deleted: false };
+    return {
+        airQualityIndex: await getFieldStats(airQualityModel, 'airQualityIndex', filter),
+        ozoneAmount: await getFieldStats(airQualityModel, 'ozoneAmount', filter),
+        numberSmallParticles: await getFieldStats(airQualityModel, 'numberSmallParticles', filter),
+        numberLargeParticles: await getFieldStats(airQualityModel, 'numberLargeParticles', filter),
+        amountNitrogenDioxide: await getFieldStats(airQualityModel, 'amountNitrogenDioxide', filter),
+        amountCarbonMonoxide: await getFieldStats(airQualityModel, 'amountCarbonMonoxide', filter),
+        amountSulfurDioxide: await getFieldStats(airQualityModel, 'amountSulfurDioxide', filter)
+    };
+};
 
 const getAllAirQuality = async (req, res) => {
     try {
@@ -32,6 +65,22 @@ const createAirQuality = async (req, res) => {
     try {
         const body = matchedData(req);
         const data = await airQualityModel.create(body);
+
+        // Obtener estadísticas y targets
+        const stats = await getAirQualityStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'crear',
+            {
+                airQualityData: data,
+                stats: stats,
+                mensaje: 'Nuevo dato de calidad del aire creado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han creado correctamente los datos de calidad del aire", data);
     } catch (err) {
         appLogger.error(`[airQualityController | create] ERROR: ${err}`);
@@ -47,6 +96,22 @@ const updateAirQuality = async (req, res) => {
             handleHTTPError(res, "No se encontro el dato de calidad del aire", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getAirQualityStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'actualizar',
+            {
+                airQualityData: data,
+                stats: stats,
+                mensaje: 'Dato de calidad del aire actualizado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han actualizado correctamente los datos de calidad del aire", data);
     } catch (err) {
         appLogger.error(`[airQualityController | update] ERROR: ${err}`);
@@ -62,6 +127,23 @@ const deleteAirQuality = async (req, res) => {
             handleHTTPError(res, "No se encontro el dato de calidad del aire", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getAirQualityStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'eliminar',
+            {
+                id: data._id,
+                sondaName: data.sondaName,
+                stats: stats,
+                mensaje: 'Dato de calidad del aire eliminado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han borrado correctamente los datos de calidad del aire", data);
     } catch (err) {
         appLogger.error(`[airQualityController | delete] ERROR: ${err}`);

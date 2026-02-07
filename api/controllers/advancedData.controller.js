@@ -1,7 +1,36 @@
 const advancedDataModel = require("../models/advancedData.models");
+const sondaModel = require("../models/sonda.model");
 const { matchedData } = require("express-validator");
 const { handleHTTPResponse, handleHTTPError, INTERNAL_SERVER_ERROR } = require("../utilities/handleResponse.util");
 const { appLogger } = require("../config/winstonLogger.config");
+
+// Importación de utilidades
+const { emitirNotificacion } = require("../../ws/events");
+const { getFieldStats } = require("../utilities/stats.util");
+
+/**
+ * Obtiene los targets de notificación (sonda y su localización)
+ */
+const getNotificationTargets = async (sondaName) => {
+    const sonda = await sondaModel.findOne({ name: sondaName, deleted: false });
+    const targets = [sondaName];
+    if (sonda && sonda.location) {
+        targets.push(sonda.location);
+    }
+    return targets;
+};
+
+/**
+ * Obtiene estadísticas para múltiples campos
+ */
+const getAdvancedDataStats = async (sondaName) => {
+    const filter = { sondaName, deleted: false };
+    return {
+        airPressure: await getFieldStats(advancedDataModel, 'airPressure', filter),
+        uvIndex: await getFieldStats(advancedDataModel, 'uvIndex', filter),
+        pollenIndex: await getFieldStats(advancedDataModel, 'pollenIndex', filter)
+    };
+};
 
 const getAllAdvancedData = async (req, res) => {
     try {
@@ -32,6 +61,22 @@ const createAdvancedData = async (req, res) => {
     try {
         const body = matchedData(req);
         const data = await advancedDataModel.create(body);
+
+        // Obtener estadísticas y targets
+        const stats = await getAdvancedDataStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'crear',
+            {
+                advancedData: data,
+                stats: stats,
+                mensaje: 'Nuevo dato avanzado creado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han creado correctamente los datos avanzados", data);
     } catch (err) {
         appLogger.error(`[advancedDataController | create] ERROR: ${err}`);
@@ -47,6 +92,22 @@ const updateAdvancedData = async (req, res) => {
             handleHTTPError(res, "No se encontro el dato avanzado", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getAdvancedDataStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'actualizar',
+            {
+                advancedData: data,
+                stats: stats,
+                mensaje: 'Dato avanzado actualizado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han actualizado correctamente los datos avanzados", data);
     } catch (err) {
         appLogger.error(`[advancedDataController | update] ERROR: ${err}`);
@@ -63,6 +124,23 @@ const deleteAdvancedData = async (req, res) => {
             handleHTTPError(res, "No se encontro el dato avanzado", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getAdvancedDataStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'eliminar',
+            {
+                id: data._id,
+                sondaName: data.sondaName,
+                stats: stats,
+                mensaje: 'Dato avanzado eliminado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han borrado correctamente los datos avanzados", data);
     } catch (err) {
         appLogger.error(`[advancedDataController | delete] ERROR: ${err}`);

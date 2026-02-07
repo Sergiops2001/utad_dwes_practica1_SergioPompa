@@ -1,0 +1,40 @@
+### LOGIN USER
+POST http://localhost:3000/api/v1/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password": "password123"
+}
+
+### POST NEW TEMPERATURE DATA (Dispara notificación 'crear')
+POST http://localhost:3000/api/v1/temperatureData HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg3NWVjNGRhODMzNzJmNTFmMmM5ZGQiLCJpYXQiOjE3NzA0ODAxNjcsImV4cCI6MTc3MDQ4NzM2N30.blDv_xbzGRSv4OlVhHtMgbtmsrbjIpXYRdcNlq2cqGQ
+
+{
+    "value": 25.5,
+    "sondaName": "Sonda-Madrid-01",
+    "dateMedition": "2026-02-02T12:00:00Z",
+    "hourMedition": "12:00"
+}
+
+### PUT TEMPERATURE DATA BY ID (Dispara notificación 'actualizar')
+PUT http://localhost:3000/api/v1/temperatureData/6987625014703e05eb3d6b2a HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg3NWVjNGRhODMzNzJmNTFmMmM5ZGQiLCJpYXQiOjE3NzA0ODAxNjcsImV4cCI6MTc3MDQ4NzM2N30.blDv_xbzGRSv4OlVhHtMgbtmsrbjIpXYRdcNlq2cqGQ
+
+{
+    "value": 28.9,
+    "sondaName": "Sonda-Madrid-01",
+    "dateMedition": "2026-02-02T12:00:00Z",
+    "hourMedition": "12:00"
+}
+
+### DELETE TEMPERATURE DATA BY ID (Dispara notificación 'eliminar')
+DELETE http://localhost:3000/api/v1/temperatureData/6987625014703e05eb3d6b2a HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg3NWVjNGRhODMzNzJmNTFmMmM5ZGQiLCJpYXQiOjE3NzA0ODAxNjcsImV4cCI6MTc3MDQ4NzM2N30.blDv_xbzGRSv4OlVhHtMgbtmsrbjIpXYRdcNlq2cqGQ
+
+### NOTA SOBRE WEBSOCKET
+# Conéctate a ws://localhost:8080/ utilizando el cliente public/websocket.html
+# para ver las notificaciones en tiempo real al ejecutar estas peticiones.

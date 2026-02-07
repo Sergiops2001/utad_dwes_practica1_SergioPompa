@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test WebSocket - AEMET</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 24px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #eee;
+      background: #fafafa;
+    }
+
+    .status {
+      padding: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+      border: 1px solid #ccc;
+    }
+
+    .status.disconnected {
+      background: #ffebee;
+      color: #c62828;
+      border-color: #ffcdd2;
+    }
+
+    .status.connected {
+      background: #e8f5e9;
+      color: #2e7d32;
+      border-color: #c8e6c9;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 300px;
+      max-width: 100%;
+      border: 1px solid #ccc;
+    }
+
+    .logs-container {
+      margin-top: 20px;
+    }
+
+    .logs-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .logs {
+      background: #333;
+      color: #eee;
+      padding: 10px;
+      height: 400px;
+      overflow-y: auto;
+      font-family: monospace;
+      font-size: 13px;
+      border: 1px solid #ccc;
+    }
+
+    .log-entry {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #444;
+      word-break: break-all;
+    }
+
+    .log-time {
+      color: #888;
+      margin-right: 10px;
+    }
+
+    .log-received {
+      color: #a5d6a7;
+    }
+
+    .log-sent {
+      color: #ffcc80;
+    }
+
+    .log-error {
+      color: #ef9a9a;
+    }
+
+    .log-info {
+      color: #90caf9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Test WebSocket - AEMET</h1>
+
+    <!-- Estado de conexión -->
+    <div id="status" class="status disconnected">
+      Desconectado
+    </div>
+
+    <!-- Controles -->
+    <div class="section">
+      <div class="controls">
+        <button id="btnConnect">Conectar</button>
+        <button id="btnDisconnect" disabled>Desconectar</button>
+      </div>
+    </div>
+
+    <!-- Suscripción -->
+    <div class="section">
+      <h3>Suscripción</h3>
+      <input type="text" id="inputLocation" placeholder="Localización (ej: Madrid) o vacío para 'global'" disabled>
+      <button id="btnSubscribe" disabled>Suscribirse</button>
+    </div>
+
+    <!-- Enviar mensaje -->
+    <div class="section">
+      <h3>Enviar Mensaje</h3>
+      <input type="text" id="inputMessage" placeholder="Mensaje de prueba..." disabled>
+      <button id="btnSend" disabled>Enviar</button>
+    </div>
+
+    <!-- Logs -->
+    <div class="logs-container">
+      <div class="logs-header">
+        <h3 style="margin:0">Logs</h3>
+        <button id="btnClearLogs">Limpiar</button>
+      </div>
+      <div id="logs" class="logs"></div>
+    </div>
+  </div>
+
+  <script>
+    // ============================================
+    // VARIABLES GLOBALES
+    // ============================================
+    let ws = null;
+    const WS_URL = 'ws://localhost:8080';
+
+    // Elementos del DOM
+    const statusDiv = document.getElementById('status');
+    const btnConnect = document.getElementById('btnConnect');
+    const btnDisconnect = document.getElementById('btnDisconnect');
+    const btnClearLogs = document.getElementById('btnClearLogs');
+    const btnSend = document.getElementById('btnSend');
+    const btnSubscribe = document.getElementById('btnSubscribe');
+    const inputMessage = document.getElementById('inputMessage');
+    const inputLocation = document.getElementById('inputLocation');
+    const logsContainer = document.getElementById('logs');
+
+    // ============================================
+    // FUNCIONES AUXILIARES
+    // ============================================
+
+    function addLog(message, type = 'info', data = null) {
+      const logEntry = document.createElement('div');
+      logEntry.className = `log-entry log-${type}`;
+
+      const time = new Date().toLocaleTimeString();
+      let content = `<span class="log-time">[${time}]</span> ${message}`;
+
+      if (data) {
+        content += `<pre style="margin: 5px 0 0 0; color: #ccc;">${JSON.stringify(data, null, 2)}</pre>`;
+      }
+
+      logEntry.innerHTML = content;
+      logsContainer.insertBefore(logEntry, logsContainer.firstChild);
+
+      // Limitar a 100 entradas
+      if (logsContainer.children.length > 100) {
+        logsContainer.removeChild(logsContainer.lastChild);
+      }
+    }
+
+    function updateStatus(connected) {
+      if (connected) {
+        statusDiv.className = 'status connected';
+        statusDiv.textContent = 'Conectado';
+        btnConnect.disabled = true;
+        btnDisconnect.disabled = false;
+        btnSend.disabled = false;
+        btnSubscribe.disabled = false;
+        inputMessage.disabled = false;
+        inputLocation.disabled = false;
+      } else {
+        statusDiv.className = 'status disconnected';
+        statusDiv.textContent = 'Desconectado';
+        btnConnect.disabled = false;
+        btnDisconnect.disabled = true;
+        btnSend.disabled = true;
+        btnSubscribe.disabled = true;
+        inputMessage.disabled = true;
+        inputLocation.disabled = true;
+      }
+    }
+
+    // ============================================
+    // EVENT HANDLERS
+    // ============================================
+
+    btnConnect.addEventListener('click', () => {
+      addLog(`Conectando a ${WS_URL}...`, 'info');
+
+      try {
+        ws = new WebSocket(WS_URL);
+
+        ws.onopen = () => {
+          addLog('Conexión establecida', 'info');
+          updateStatus(true);
+        };
+
+        ws.onmessage = (event) => {
+          try {
+            const mensaje = JSON.parse(event.data); // Try parsing JSON
+            if (mensaje.tipo === 'confirmacion') {
+              addLog(`Confirmación: ${mensaje.mensaje}`, 'received');
+            } else {
+              const info = mensaje.datos?.mensaje || (mensaje.tipo ? `${mensaje.tipo} en ${mensaje.targets?.join(', ') || 'global'}` : 'Mensaje recibido');
+              addLog(`Notificación: ${info}`, 'received', mensaje.datos);
+            }
+          } catch (e) {
+            addLog(`Mensaje recibido: ${event.data}`, 'received');
+          }
+        };
+
+        ws.onerror = (error) => {
+          addLog('Error en la conexión', 'error');
+          console.error('WebSocket error:', error);
+        };
+
+        ws.onclose = (event) => {
+          addLog(`Conexión cerrada (código: ${event.code})`, 'error');
+          updateStatus(false);
+          ws = null;
+        };
+
+      } catch (error) {
+        addLog(`Error al crear WebSocket: ${error.message}`, 'error');
+      }
+    });
+
+    btnDisconnect.addEventListener('click', () => {
+      if (ws) {
+        ws.close();
+        addLog('Desconexión manual solicitada', 'info');
+      }
+    });
+
+    btnClearLogs.addEventListener('click', () => {
+      logsContainer.innerHTML = '';
+      addLog('Logs limpiados', 'info');
+    });
+
+    btnSubscribe.addEventListener('click', () => {
+      const localizacion = inputLocation.value.trim() || null;
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        const payload = {
+          tipo: 'suscribirse',
+          localizacion: localizacion
+        };
+        ws.send(JSON.stringify(payload));
+        addLog(`Enviado suscripción: ${localizacion || 'global'}`, 'sent');
+        inputLocation.value = '';
+      }
+    });
+
+    btnSend.addEventListener('click', sendMessage);
+    inputMessage.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    function sendMessage() {
+      const message = inputMessage.value.trim();
+      if (!message) return;
+
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(message);
+        addLog(`Enviado: ${message}`, 'sent');
+        inputMessage.value = '';
+      } else {
+        addLog('No conectado', 'error');
+      }
+    }
+
+    // Inicialización
+    addLog('Listo para conectar.', 'info');
+  </script>
+</body>
+
+</html>

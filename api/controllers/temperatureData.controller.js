@@ -1,7 +1,24 @@
 const temperatureModel = require("../models/temperatureData.models");
+const sondaModel = require("../models/sonda.model");
 const { matchedData } = require("express-validator");
 const { handleHTTPResponse, handleHTTPError, INTERNAL_SERVER_ERROR } = require("../utilities/handleResponse.util");
 const { appLogger } = require("../config/winstonLogger.config");
+
+// Importación de utilidades
+const { emitirNotificacion } = require("../../ws/events");
+const { getFieldStats } = require("../utilities/stats.util");
+
+/**
+ * Obtiene los targets de notificación (sonda y su localización)
+ */
+const getNotificationTargets = async (sondaName) => {
+    const sonda = await sondaModel.findOne({ name: sondaName, deleted: false });
+    const targets = [sondaName];
+    if (sonda && sonda.location) {
+        targets.push(sonda.location);
+    }
+    return targets;
+};
 
 const getAlltemperatureData = async (req, res) => {
     try {
@@ -32,6 +49,22 @@ const createtemperatureData = async (req, res) => {
     try {
         const body = matchedData(req);
         const data = await temperatureModel.create(body);
+
+        // Obtener estadísticas y targets
+        const stats = await getFieldStats(temperatureModel, 'value', { sondaName: data.sondaName, deleted: false });
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'crear',
+            {
+                temperatureData: data,
+                stats: stats,
+                mensaje: 'Nuevo dato de temperatura creado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han creado correctamente los datos de temperatura", data);
     } catch (err) {
         appLogger.error(`[temperatureDataController | create] ERROR: ${err}`);
@@ -43,10 +76,27 @@ const updatetemperatureData = async (req, res) => {
     try {
         const { id, ...body } = matchedData(req);
         const data = await temperatureModel.findOneAndUpdate({ _id: id, deleted: false }, body, { new: true });
+
         if (!data) {
             handleHTTPError(res, "No se encontro el dato de temperatura", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getFieldStats(temperatureModel, 'value', { sondaName: data.sondaName, deleted: false });
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'actualizar',
+            {
+                temperatureData: data,
+                stats: stats,
+                mensaje: 'Dato de temperatura actualizado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han actualizado correctamente los datos de temperatura", data);
     } catch (err) {
         appLogger.error(`[temperatureDataController | update] ERROR: ${err}`);
@@ -58,10 +108,28 @@ const deletetemperatureData = async (req, res) => {
     try {
         const { id } = matchedData(req);
         const data = await temperatureModel.findOneAndUpdate({ _id: id, deleted: false }, { deleted: true }, { new: true });
+
         if (!data) {
             handleHTTPError(res, "No se encontro el dato de temperatura", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getFieldStats(temperatureModel, 'value', { sondaName: data.sondaName, deleted: false });
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'eliminar',
+            {
+                id: data._id,
+                sondaName: data.sondaName,
+                stats: stats,
+                mensaje: 'Dato de temperatura eliminado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han borrado correctamente los datos de temperatura", data);
     } catch (err) {
         appLogger.error(`[temperatureDataController | delete] ERROR: ${err}`);

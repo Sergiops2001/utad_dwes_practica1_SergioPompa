@@ -314,7 +314,7 @@ router.get("/:id", validateGettemperatureDataById, gettemperatureDataById);
 router.post("/", authMiddleware, validateCreatetemperatureData, createtemperatureData);
 
 /**
- * @openapi
+ * @openapi 
  * /api/v1/temperatureData/{id}:
  *  put:
  *    tags:

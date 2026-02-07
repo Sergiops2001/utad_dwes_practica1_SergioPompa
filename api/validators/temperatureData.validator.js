@@ -10,7 +10,7 @@ const { validateResults } = require("../utilities/handleValidator.util");
 const validateCreatetemperatureData = [
     check("value").exists().isNumeric().withMessage("El valor de temperatura es obligatorio"),
     check("sondaName").exists().isString().withMessage("El nombre de la sonda es obligatorio"),
-    check("dateMedition").exists().isDate().withMessage("La fecha de medición es obligatoria"),
+    check("dateMedition").exists().isISO8601().withMessage("La fecha de medición es obligatoria"),
     check("hourMedition").exists().isString().withMessage("La hora de medición es obligatoria"),
     (req, res, next) => {
         return validateResults(req, res, next)
@@ -21,7 +21,7 @@ const validateUpdatetemperatureData = [
     check("id").exists().isMongoId().withMessage("El id es obligatorio"),
     check("value").exists().isNumeric().withMessage("El valor de temperatura es obligatorio"),
     check("sondaName").exists().isString().withMessage("El nombre de la sonda es obligatorio"),
-    check("dateMedition").exists().isDate().withMessage("La fecha de medición es obligatoria"),
+    check("dateMedition").exists().isISO8601().withMessage("La fecha de medición es obligatoria"),
     check("hourMedition").exists().isString().withMessage("La hora de medición es obligatoria"),
     (req, res, next) => {
         return validateResults(req, res, next)

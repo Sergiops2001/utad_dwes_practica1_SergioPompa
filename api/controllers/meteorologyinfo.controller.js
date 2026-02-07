@@ -1,7 +1,35 @@
 const meteorologyModel = require("../models/meteorologyinfo.models");
+const sondaModel = require("../models/sonda.model");
 const { matchedData } = require("express-validator");
 const { handleHTTPResponse, handleHTTPError, INTERNAL_SERVER_ERROR } = require("../utilities/handleResponse.util");
 const { appLogger } = require("../config/winstonLogger.config");
+
+// Importación de utilidades
+const { emitirNotificacion } = require("../../ws/events");
+const { getFieldStats } = require("../utilities/stats.util");
+
+/**
+ * Obtiene los targets de notificación (sonda y su localización)
+ */
+const getNotificationTargets = async (sondaName) => {
+    const sonda = await sondaModel.findOne({ name: sondaName, deleted: false });
+    const targets = [sondaName];
+    if (sonda && sonda.location) {
+        targets.push(sonda.location);
+    }
+    return targets;
+};
+
+/**
+ * Obtiene estadísticas para múltiples campos
+ */
+const getMeteorologyStats = async (sondaName) => {
+    const filter = { sondaName, deleted: false };
+    return {
+        temperature: await getFieldStats(meteorologyModel, 'temperature', filter),
+        windChill: await getFieldStats(meteorologyModel, 'windChill', filter)
+    };
+};
 
 const getAllMeteorology = async (req, res) => {
     try {
@@ -32,6 +60,22 @@ const createMeteorology = async (req, res) => {
     try {
         const body = matchedData(req);
         const data = await meteorologyModel.create(body);
+
+        // Obtener estadísticas y targets
+        const stats = await getMeteorologyStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'crear',
+            {
+                meteorologyData: data,
+                stats: stats,
+                mensaje: 'Nuevo dato meteorológico creado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han creado correctamente los datos meteorológicos", data);
     } catch (err) {
         appLogger.error(`[meteorologyinfoController | create] ERROR: ${err}`);
@@ -47,6 +91,22 @@ const updateMeteorology = async (req, res) => {
             handleHTTPError(res, "No se encontro el dato meteorológico", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getMeteorologyStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'actualizar',
+            {
+                meteorologyData: data,
+                stats: stats,
+                mensaje: 'Dato meteorológico actualizado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han actualizado correctamente los datos meteorológicos", data);
     } catch (err) {
         appLogger.error(`[meteorologyinfoController | update] ERROR: ${err}`);
@@ -62,6 +122,23 @@ const deleteMeteorology = async (req, res) => {
             handleHTTPError(res, "No se encontro el dato meteorológico", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getMeteorologyStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'eliminar',
+            {
+                id: data._id,
+                sondaName: data.sondaName,
+                stats: stats,
+                mensaje: 'Dato meteorológico eliminado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han borrado correctamente los datos meteorológicos", data);
     } catch (err) {
         appLogger.error(`[meteorologyinfoController | delete] ERROR: ${err}`);

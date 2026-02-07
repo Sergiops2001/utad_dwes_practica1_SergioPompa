@@ -14,7 +14,8 @@ const validateResults = (req, res, next) => {
     }
     catch (err) {
         appLogger.error("Validation Error:", err.array());
-        handleHTTPError(res, "No se ha podido validar correctamente los datos de entrada");
+        const errors = err.array().map(e => e.msg).join('; ');
+        handleHTTPError(res, `Valores no válidos: ${errors}`, 400);
     }
 }
 //Exportando modulo

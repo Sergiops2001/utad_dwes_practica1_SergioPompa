@@ -1,0 +1,36 @@
+### CREAR dato (SIMPLE)
+POST http://localhost:3000/api/v1/temperatureData
+Content-Type: application/json
+
+{
+  "sondaName": "Sonda-Madrid-01",
+  "value": 25.5,
+  "dateMedition": "2026-01-29T10:00:00Z",
+  "hourMedition": "10:00"
+}
+
+###
+
+###
+
+### 2. OBTENER TODOS los datos (sin autenticación)
+GET http://localhost:3000/api/v1/temperatureData
+
+###
+
+### 3. ACTUALIZAR dato (cambiar ID y token)
+PUT http://localhost:3000/api/v1/temperatureData/XXXXXXXXXX
+Content-Type: application/json
+Authorization: Bearer TU_TOKEN_AQUI
+
+{
+  "value": 30.0
+}
+
+###
+
+### 4. ELIMINAR dato (cambiar ID y token)
+DELETE http://localhost:3000/api/v1/temperatureData/XXXXXXXXXX
+Authorization: Bearer TU_TOKEN_AQUI
+
+###

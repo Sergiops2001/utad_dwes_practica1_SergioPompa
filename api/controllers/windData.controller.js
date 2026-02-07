@@ -1,7 +1,35 @@
 const windModel = require("../models/windData.models");
+const sondaModel = require("../models/sonda.model");
 const { matchedData } = require("express-validator");
 const { handleHTTPResponse, handleHTTPError, INTERNAL_SERVER_ERROR } = require("../utilities/handleResponse.util");
 const { appLogger } = require("../config/winstonLogger.config");
+
+// Importación de utilidades
+const { emitirNotificacion } = require("../../ws/events");
+const { getFieldStats } = require("../utilities/stats.util");
+
+/**
+ * Obtiene los targets de notificación (sonda y su localización)
+ */
+const getNotificationTargets = async (sondaName) => {
+    const sonda = await sondaModel.findOne({ name: sondaName, deleted: false });
+    const targets = [sondaName];
+    if (sonda && sonda.location) {
+        targets.push(sonda.location);
+    }
+    return targets;
+};
+
+/**
+ * Obtiene estadísticas para múltiples campos
+ */
+const getWindStats = async (sondaName) => {
+    const filter = { sondaName, deleted: false };
+    return {
+        windSpeed: await getFieldStats(windModel, 'windSpeed', filter),
+        windGustSpeed: await getFieldStats(windModel, 'windGustSpeed', filter)
+    };
+};
 
 const getAllWind = async (req, res) => {
     try {
@@ -32,6 +60,22 @@ const createWind = async (req, res) => {
     try {
         const body = matchedData(req);
         const data = await windModel.create(body);
+
+        // Obtener estadísticas y targets
+        const stats = await getWindStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'crear',
+            {
+                windData: data,
+                stats: stats,
+                mensaje: 'Nuevo dato de viento creado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han creado correctamente los datos de viento", data);
     } catch (err) {
         appLogger.error(`[windDataController | create] ERROR: ${err}`);
@@ -47,6 +91,22 @@ const updateWind = async (req, res) => {
             handleHTTPError(res, "No se encontro el dato de viento", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getWindStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'actualizar',
+            {
+                windData: data,
+                stats: stats,
+                mensaje: 'Dato de viento actualizado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han actualizado correctamente los datos de viento", data);
     } catch (err) {
         appLogger.error(`[windDataController | update] ERROR: ${err}`);
@@ -62,6 +122,23 @@ const deleteWind = async (req, res) => {
             handleHTTPError(res, "No se encontro el dato de viento", 404);
             return;
         }
+
+        // Obtener estadísticas y targets
+        const stats = await getWindStats(data.sondaName);
+        const targets = await getNotificationTargets(data.sondaName);
+
+        // Emitir notificación por WebSocket
+        emitirNotificacion(
+            'eliminar',
+            {
+                id: data._id,
+                sondaName: data.sondaName,
+                stats: stats,
+                mensaje: 'Dato de viento eliminado'
+            },
+            targets
+        );
+
         handleHTTPResponse(res, "Se han borrado correctamente los datos de viento", data);
     } catch (err) {
         appLogger.error(`[windDataController | delete] ERROR: ${err}`);
